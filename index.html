@@ -38,6 +38,7 @@
     const randomInteger = (min, max) => {
       return Math.floor(min + Math.random() * (max + 1 - min));
     };
-    image.src = `./rich-pics/profile-pic${randomInteger(10, 30)}.png`;
+    const pad = randomInteger(0, 40).toString().padStart(2, 0);
+    image.src = `./rich-pics/profile-pic${pad}.png`;
   </script>
 </html>
