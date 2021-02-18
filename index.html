@@ -23,10 +23,21 @@
   <body>
     <main class="center">
       <img
-        src="https://pbs.twimg.com/profile_images/1358057537812193287/Q7fpOKTi_400x400.jpg"
+        id="id1"
+        alt="A stunningly attractive man running his looks by wearing a beanie, glasses and growing a beard!"
       />
       <h1>Jobba Jobba Jobba</h1>
       <p>pronounced "yobba, yobba, yobba"</p>
     </main>
   </body>
+  <script>
+    const image = new Image();
+    image.onload = function () {
+      document.getElementById("id1").setAttribute("src", this.src);
+    };
+    const randomInteger = (min, max) => {
+      return Math.floor(min + Math.random() * (max + 1 - min));
+    };
+    image.src = `./rich-pics/profile-pic${randomInteger(10, 30)}.png`;
+  </script>
 </html>
